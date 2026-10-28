@@ -1,0 +1,138 @@
+/* ===== Design system (repris de la Partie 1) ===== */
+:root {
+  --couleur-primaire: #0B4F6C;
+  --couleur-accent: #F7B955;
+  --couleur-fond: #FFFFFF;
+  --couleur-fond-doux: #F0F4F6;
+  --couleur-bordure: #C9D6DD;
+  --couleur-sombre: #04161e;
+  --couleur-succes: #1F7A4D;
+
+  --police: "Rubik", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --rayon: 12px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--police);
+  font-size: 16px;
+  line-height: 1.5;
+  color: var(--couleur-primaire);
+  background: var(--couleur-fond-doux);
+}
+
+button, input, select {
+  font: inherit;
+}
+
+/* ===== En-tête ===== */
+.entete {
+  padding: 16px 24px;
+  background: var(--couleur-primaire);
+  color: var(--couleur-fond);
+}
+
+.entete h1 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* ===== Vue ===== */
+main {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.vue {
+  padding: 20px;
+  border-radius: var(--rayon);
+  background: var(--couleur-fond);
+}
+
+.vue-haut {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.vue-haut h2 {
+  font-size: 22px;
+}
+
+.compteur {
+  color: var(--couleur-primaire);
+  opacity: 0.8;
+}
+
+/* ===== Tableau ===== */
+.tableau-conteneur {
+  overflow-x: auto;
+}
+
+.tableau {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.tableau th,
+.tableau td {
+  padding: 10px 12px;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.tableau thead th {
+  position: sticky;
+  top: 0;
+  background: var(--couleur-primaire);
+  color: var(--couleur-fond);
+  font-weight: 600;
+}
+
+.tableau tbody tr {
+  border-bottom: 1px solid var(--couleur-bordure);
+}
+
+.tableau tbody tr:nth-child(even) {
+  background: var(--couleur-fond-doux);
+}
+
+.tableau tbody tr:hover {
+  background: #E3ECF0;
+}
+
+/* ===== Badges de statut ===== */
+.statut {
+  display: inline-block;
+  padding: 2px 10px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.statut--en-attente {
+  background: var(--couleur-accent);
+  color: var(--couleur-sombre);
+}
+
+.statut--valide {
+  background: var(--couleur-primaire);
+  color: var(--couleur-fond);
+}
+
+.statut--paye {
+  background: var(--couleur-succes);
+  color: var(--couleur-fond);
+}
