@@ -1,11 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nour Academy — Back-office</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;600&display=swap">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    
+  <header class="entete">
+    <h1>Nour Academy — Back-office</h1>
+  </header>
+
+  <main>
+    <section class="vue" id="vue-inscriptions" aria-labelledby="titre-inscriptions">
+      <div class="vue-haut">
+        <h2 id="titre-inscriptions">Inscriptions</h2>
+        <p class="compteur" id="compteur"></p>
+      </div>
+
+      <div class="tableau-conteneur">
+        <table class="tableau">
+          <thead>
+            <tr>
+              <th scope="col">N° de dossier</th>
+              <th scope="col">Élève</th>
+              <th scope="col">Niveau</th>
+              <th scope="col">Cours</th>
+              <th scope="col">Tél. parent</th>
+              <th scope="col">Statut</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody id="corps-tableau"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <script type="module" src="js/main.js"></script>
 </body>
 </html>
